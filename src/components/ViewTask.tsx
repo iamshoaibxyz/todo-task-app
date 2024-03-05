@@ -8,7 +8,7 @@ async function getData() {
 
     const env = process.env.NODE_ENV;
     if (env == "production") {
-      nodeEnv = process.env.VERCEL_URL;
+      nodeEnv = process.env.CUSTOM_URL;
     } else if (env == "development") {
       nodeEnv = process.env.URL;
     }
