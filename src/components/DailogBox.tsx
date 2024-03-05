@@ -59,13 +59,13 @@ export function DialogDemo() {
     <Dialog onOpenChange={setBoxOpen} open={boxOpen}>
       <DialogTrigger asChild>
         <Button className="border-2" variant="outline">
-          <div className="flex items-center gap-2 justify-center">
+          <div className="flex items-center gap-1 sm:gap-2 justify-center">
             <Plus className=""></Plus>
             <span>Add Task </span>
           </div>
         </Button>
       </DialogTrigger>
-      <DialogContent className=" max-w-[412px] sm:max-w-[425px]">
+      <DialogContent className=" max-w-[412px] -mt-24 sm:mt-0 sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>Add Todos</DialogTitle>
           <DialogDescription>
@@ -73,16 +73,16 @@ export function DialogDemo() {
             done.
           </DialogDescription>
         </DialogHeader>
-        <div className="grid gap-4 py-4">
+        <div className="grid gap-2 py-2 sm:gap-4 sm:py-4">
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
+            <Label htmlFor="name" className="text-right hidden sm:inline-block">
               Title
             </Label>
             <Input
               id="name"
               placeholder="Define task"
               value={title}
-              className="col-span-3"
+              className="col-span-4 sm:col-span-3"
               onChange={inputHandler}
             />
           </div>
@@ -92,11 +92,11 @@ export function DialogDemo() {
             </Label>
           </div>
           <div className="grid w-full grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
+            <Label htmlFor="name" className="text-right hidden sm:inline-block">
               Description
             </Label>
             <Textarea
-              className="max-h-24 w-full col-span-3"
+              className="max-h-24 w-full col-span-4 sm:col-span-3"
               placeholder="Describe your Task..."
               value={description}
               onChange={textAreaHandler}

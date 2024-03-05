@@ -51,8 +51,10 @@ export function AlertDialogDemo({ id }: { id: number | undefined }) {
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
             <form onSubmit={handleSubmit}>
-              <button type="submit">
-                <AlertDialogAction>Continue</AlertDialogAction>
+              <button className="w-full" type="submit">
+                <AlertDialogAction className="w-full">
+                  Continue
+                </AlertDialogAction>
               </button>
             </form>
           </AlertDialogFooter>
